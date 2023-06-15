@@ -1,8 +1,5 @@
 import requests
 
-
-criptos =["BTC","ETH","USDT","BNB","USCD"]
-fiats = ["EUR","USD","JPY"]
 apikey = "1B731114-B858-433E-89F1-A792584BE95B"
 
 def get_rate(cripto,fiat):
@@ -17,7 +14,5 @@ def get_rate(cripto,fiat):
             
         else: 
             return False, data['error']
-            print(response.status_code,"-",data["error"])
     except requests.exceptions.RequestException as e:
         return False, str(e)
-        
