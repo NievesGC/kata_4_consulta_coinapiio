@@ -10,7 +10,7 @@ class Converter(tk.Tk):
 
         self.criptos = Desplegable(self,"CRIPTO","BTC","ETH","USDT","BNB","USDC")
         self.criptos.grid(column=0,row=0)
-        self.criptos.selected_option.trace("w", self.validate_button)
+        #self.criptos.selected_option.trace("w", self.validate_button)
 
         self.fiats = Desplegable(self,"FIAT","EUR","USD","JPY")
         self.fiats.grid(column=1,row=0)
