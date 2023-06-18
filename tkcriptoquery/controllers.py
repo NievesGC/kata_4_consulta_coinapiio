@@ -14,6 +14,7 @@ class Converter(tk.Tk):
 
         self.fiats = Desplegable(self,"FIAT","EUR","USD","JPY")
         self.fiats.grid(column=1,row=0)
+        #self.fiats.selected_option.trace("w", self.validate_button)
 
         self.result = tk.Label(self)
         self.result.grid(row=1,column=0)
@@ -22,7 +23,7 @@ class Converter(tk.Tk):
 
     
 
-    def get_rate(self):
+    def get_rate(self): 
         cripto = self.criptos.selected_option.get()
         fiat = self.fiats.selected_option.get()
 
@@ -36,3 +37,7 @@ class Converter(tk.Tk):
         else: 
             self.result.config(text="Dwbwa seleccionar ambos valores")
             
+
+
+    
+        
